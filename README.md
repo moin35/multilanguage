@@ -1,5 +1,5 @@
 #How to use Multi Language in laravel 5.2
-##First Step :
+###First Step :
 1.	Create a new Project.
 2.	Create two controller named HomeController & LangController
   php artisan make:controller HomeController
@@ -19,7 +19,7 @@ return [
 ];
 
 
-##Third Step :
+###Third Step :
 1.	E:\yourproject\resources\views go this path create a file langtest.blade.php
 then copy paste this code
 <!DOCTYPE html>
@@ -30,7 +30,7 @@ then copy paste this code
 <body>
 <div class="col-md-4"></div>
 <div class="col-md-4">
-    <h1>Multi lang</h1>
+    <h1 >Multi lang</ h1>
     {{session('lang_msg')}}
     <h3>{{Lang::get('home.hello')}}</h3>
     Default Language: {{Lang::getLocale()}}<br>
@@ -42,7 +42,7 @@ then copy paste this code
 </html>
 
 
-##Step Four: 
+###Step Four: 
 1.	E:\yourproject\app\Http go this path and open route.php file then write 
 Route::get('/','HomeController@home');
 Route::get('/lang/{lang}','LangController@home');
@@ -61,7 +61,7 @@ public function home($lang){
     }
 }
 then save and exit here.
-##Step Five :
+###Step Five :
 1. open your cmd create a middleware file 
 	php artisan make:middleware Lang 
 now go E:\yourproject\app\Http\Middleware and open Lang.php file then write below code 
