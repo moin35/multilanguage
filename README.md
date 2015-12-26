@@ -1,47 +1,32 @@
 #How to use Multi Language in laravel 5.2
 ###First Step :
 1.	Create a new Project.
-2.	Create two controller named HomeController & LangController
-  php artisan make:controller HomeController
-  php artisan make:controller LangController 
+2.	Create two controller named HomeController & LangController 
 3.	E:\yourproject\resources\lang go this path and create two folder named en & bn
 en maybe allready created in this case create just bn folder.
-Second Step:
+###Second Step:
 1.	under en folder create a file named home.php 
-write <?php 
-return [
-'hello' => 'English' 
-]; 
+write
+return ['hello' => 'English']; 
 2.	under bn folder create a file named home.php 
-write <?php 
-return [
-'hello' => 'বাংলা'  
-];
-
-
+write
+return ['hello' => 'বাংলা'];
 ###Third Step :
 1.	E:\yourproject\resources\views go this path create a file langtest.blade.php
 then copy paste this code
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-</head>
+<html lang="en"><head><meta charset="utf-8"></head>
 <body>
 <div class="col-md-4"></div>
 <div class="col-md-4">
-    <h1 >Multi lang</ h1>
     {{session('lang_msg')}}
     <h3>{{Lang::get('home.hello')}}</h3>
     Default Language: {{Lang::getLocale()}}<br>
     select language: <a href="{{url('lang/bn')}}">বাংলা</a> | <a href="{{url('lang/en')}}">English</a>
 </div>
 <div class="col-md-4"></div>
-
 </body>
 </html>
-
-
 ###Step Four: 
 1.	E:\yourproject\app\Http go this path and open route.php file then write 
 Route::get('/','HomeController@home');
