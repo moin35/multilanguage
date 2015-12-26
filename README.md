@@ -45,7 +45,7 @@ public function home($lang){
     $langs=['bn','en'];
     if (in_array($lang, $langs)) {
         Session::set('lang', $lang);
-        return Redirect::back()->with('lang_msg','Not Found');
+        return Redirect::back()->with('lang_msg','Your changing language');
     }
 }
 then save and exit here.
