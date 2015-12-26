@@ -4,6 +4,7 @@
 2.	Create two controller named HomeController & LangController 
 3.	E:\yourproject\resources\lang go this path and create two folder named en & bn
 en maybe allready created in this case create just bn folder.
+
 ###Second Step:
 1.	under en folder create a file named home.php 
 write
@@ -11,6 +12,7 @@ return ['hello' => 'English'];
 2.	under bn folder create a file named home.php 
 write
 return ['hello' => 'বাংলা'];
+
 ###Third Step :
 1.	E:\yourproject\resources\views go this path create a file langtest.blade.php
 then copy paste this code
@@ -27,6 +29,7 @@ then copy paste this code
 <div class="col-md-4"></div>
 </body>
 </html>
+
 ###Step Four: 
 1.	E:\yourproject\app\Http go this path and open route.php file then write 
 Route::get('/','HomeController@home');
@@ -46,6 +49,7 @@ public function home($lang){
     }
 }
 then save and exit here.
+
 ###Step Five :
 1. open your cmd create a middleware file 
 	php artisan make:middleware Lang 
