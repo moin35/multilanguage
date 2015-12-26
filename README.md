@@ -42,7 +42,7 @@ public function home(){
 }
 and under langcontroller write 
 public function home($lang){
-    $langs=['tr','en'];
+    $langs=['bn','en'];
     if (in_array($lang, $langs)) {
         Session::set('lang', $lang);
         return Redirect::back()->with('lang_msg','Not Found');
