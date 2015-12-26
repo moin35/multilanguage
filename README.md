@@ -2,7 +2,7 @@
 ###First Step :
 1.	Create a new Project.
 2.	Create two controller named HomeController & LangController 
-3.	E:\yourproject\resources\lang go this path and create two folder named en & bn
+3.	E:\yourproject\resources\lang go this path and create two folder named en & bn,
 en maybe allready created in this case create just bn folder.
 
 ###Second Step:
